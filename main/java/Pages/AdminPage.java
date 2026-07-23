@@ -17,8 +17,6 @@ public class AdminPage {
     private final By recordNUmber = By.xpath("//span[contains(normalize-space(),'Records Found')]");
     private final By addButton= By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[1]/button");
 
-
-
     private final By userRoleDropdown = By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div/div[1]");
 
     private final By employeeName = By.xpath("//input[@placeholder='Type for hints...']");
