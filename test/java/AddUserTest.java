@@ -3,6 +3,8 @@ import Pages.Dashboard;
 import Pages.LoginPage;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 
 public class AddUserTest extends BaseTest {
 
@@ -28,9 +30,11 @@ public class AddUserTest extends BaseTest {
 
     @Test
     public void adminCanAddedNewUser(){
-        adminPage=new AdminPage(driver);
-        adminPage.selectUserRole("ESS");
 
+        adminPage=new AdminPage(driver);
+        adminPage.clickAddButton();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        adminPage.selectUserRole("ESS");
         adminPage.enterEmployeeName("Test  Automation");
         adminPage.selectStatus("Enabled");
         adminPage.enterUsername("tester");

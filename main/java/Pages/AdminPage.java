@@ -13,11 +13,10 @@ public class AdminPage {
     }
 
     //Locator
-
     private final By recordNUmber = By.xpath("//span[contains(normalize-space(),'Records Found')]");
-    private final By addButton= By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[1]/button");
+    private final By addButton= By.xpath("button[type=\"button\"][class=\"oxd-button oxd-button--medium oxd-button--secondary\"]");
 
-    private final By userRoleDropdown = By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div/div[1]");
+    private final By userRoleDropdown = By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container.--collapse > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-header-container > button");
 
     private final By employeeName = By.xpath("//input[@placeholder='Type for hints...']");
 
@@ -30,11 +29,6 @@ public class AdminPage {
     private final By confirmPassword = By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[2]/div/div[2]/input");
 
     private final By saveButton = By.xpath("//button[normalize-space()='Save']");
-
-    //////////
-//    private final By suggestion = By.xpath("//input[@value='" + employeeName + "']");
-
-
 
     //Action
 

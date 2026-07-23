@@ -12,6 +12,6 @@ public class Waite {
 
     private Waite(){}
     public static WebElement waitForElementClickable(WebDriver driver,By locator){
-        return new WebDriverWait(driver,Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(locator));
+        return new WebDriverWait(driver,Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(locator));
     }
 }
