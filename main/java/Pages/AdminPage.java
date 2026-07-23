@@ -42,17 +42,17 @@ public class AdminPage {
 
     public void clickAddButton() {
         Waite.waitForElementClickable(driver, addButton);
-        driver.findElement(addButton).click();
+        ActionsElement.clickOnElement(driver,addButton);
     }
 
     public void selectUserRole(String role) {
         Waite.waitForElementClickable(driver, userRoleDropdown);
-        driver.findElement(userRoleDropdown).click();
+        ActionsElement.clickOnElement(driver,userRoleDropdown);
 
         By roleOption = By.xpath("//div[normalize-space()='" + role + "']");
 
         Waite.waitForElementClickable(driver, roleOption);
-        driver.findElement(roleOption).click();
+        ActionsElement.clickOnElement(driver,roleOption);
     }
 
     public void enterEmployeeName(String Name) {
